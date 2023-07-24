@@ -1,0 +1,24 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background: #2e8a9b;
+    color: beige;
+}
+
+table{
+    border-spacing: 15px;
+}
+.logo{
+    width: 300px;
+    height: 100px;
+}
+.baner{
+    width: 1310px;
+    height: 300px;
+}
+.image{
+    width: 400px;
+    height: 200px;
+}

@@ -1,0 +1,237 @@
+/*varieable global "*" no aconsejable */
+/* Cuadros */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: justify;
+  width: 100%;
+  height: 100%;
+}
+.dashed {
+  border: 5px outset;
+  border-color: #004e92;
+  border-radius: 25px;
+  padding: 15px;
+  margin: 15px;
+}
+
+/*Propiedades para lista desordenada*/
+.disc {
+  list-style-type: disc;
+}
+.circle {
+  list-style-type: circle;
+}
+.square {
+  list-style-type: square;
+}
+/*Propiedades para lista ordenada*/
+.decimal {
+  list-style-type: decimal;
+}
+.lower-alp {
+  list-style-type: lower-alpha;
+}
+.lower-gre {
+  list-style-type: lower-greek;
+}
+.lower-rom {
+  list-style-type: lower-roman;
+}
+/*Propiedades para lista Posicion*/
+.list-in {
+  list-style-type: circle;
+  list-style-position: inside;
+}
+.list-out {
+  list-style-type: square;
+  list-style-position: outside;
+}
+.list-img {
+  list-style-image: url("https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiwgPu_wdH2AhXkKLkGHdDUAtYQqa4BegQIBxAA&url=https%3A%2F%2Fwww.pngwing.com%2Fes%2Ffree-png-hnrei&usg=AOvVaw2XqjHm--4qjGC6bjYIZRVd");
+}
+/*Propiedades para lista para el uso de Navegacion horizontal*/
+.nav-hor a {
+  text-decoration: none;
+  display: block;
+  height: 20px;
+  color: aliceblue;
+  background-color: cadetblue;
+  text-align: center;
+  padding: 4px;
+}
+.nav-hor li {
+  float: left;
+  margin: 0%;
+  padding: 0%;
+}
+.nav-hor a:hover,
+.nav-hor a:active {
+  background-color: aquamarine;
+}
+.nav-hor {
+  list-style-type: none;
+  margin: 0%;
+  padding: 0%;
+}
+/*Propiedades para lista para el uso de Navegacion vertical*/
+
+.nav-ver a {
+  text-decoration: none;
+  display: block;
+  width: 120px;
+  color: aliceblue;
+  background-color: cadetblue;
+  text-align: center;
+  padding: 4px;
+}
+.nav-ver a:hover,
+.nav-ver a:active {
+  background-color: aquamarine;
+}
+.nav-ver {
+  list-style-type: none;
+  margin: 0%;
+  padding: 0%;
+}
+/*Propiedades para texto*/
+.font-famili-h {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 200;
+}
+.font-famili-p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: italic;
+}
+.text-b {
+  text-decoration: underline;
+}
+.text-a {
+  text-align: center;
+  text-indent: 2px;
+  text-transform: uppercase;
+}
+.text-c {
+  text-align: center;
+  text-indent: 2px;
+  text-transform: uppercase;
+}
+.text-d {
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  font-size: 15px;
+  line-height: 1.8em;
+  white-space: inherit;
+}
+/*Propiedades con colores*/
+.back {
+  background-color: bisque;
+}
+.color-rgba {
+  background-color: rgba(79, 129, 189, 0.55);
+}
+.color-hsla {
+  background-color: hsl(120, 55%, 62%, 0.25);
+}
+/*navegacion*/
+.back-a {
+  background-color: cadetblue;
+  padding: 1em;
+}
+.back-a h1 {
+  display: inline;
+}
+
+.back-a a {
+  font-size: 19px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: backgraund-color ls linear;
+}
+.back-a form {
+  display: inline;
+  margin-left: auto;
+  padding-left: 2em;
+  width: 100%;
+}
+.back-a label {
+  font-size: 19px;
+  margin: 0;
+}
+.back-a input {
+  padding: 0.7em, 0.5em;
+}
+.back-a button {
+  padding: 0.7em, 0.5em;
+  cursor: pointer;
+}
+.back-a button,
+input {
+  border: 0;
+  font-size: 8px;
+  color: #000;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.3);
+  transition: backgraund-color ls linear;
+}
+.back-a a:hover,
+input:hover,
+button:hover,
+a:focus,
+input:focus,
+button:focus {
+  background-color: #fff;
+}
+
+.back-a a:focus,
+input:focus,
+button:focus {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
+  outline: 0;
+}
+
+/*!important*/
+.import {
+  font-weight: bold !important;
+}
+
+/*Herencia*/
+.bod {
+  color: green;
+  font-weight: bold;
+}
+.ine {
+  border: 2px solid black;
+}
+a {
+  color: inherit;
+}
+strong {
+  color: initial;
+}
+
+/*box-sizing*/
+.box-sizing-content,
+.box-sizing-border {
+  width: 14em;
+  border: 3px solid black;
+}
+.box-sizing-content .split {
+  box-sizing: content-box;
+  width: 50%;
+  border: 6px silver ridge;
+  float: left;
+}
+.box-sizing-border .split {
+  box-sizing: border-box;
+  width: 50%;
+  border: 6px silver ridge;
+  float: left;
+}
+.clearb {
+  clear: both;
+}

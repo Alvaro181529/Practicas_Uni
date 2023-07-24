@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <title>JavaScript</title>
+        <style>
+            body{
+                background: #eaeaea;
+            }
+            .in{
+                outline: none;
+                border-radius: 20px;
+                margin: 10px;
+                padding: 5px;
+                height: 15px;
+            }
+            .cajita{
+                width: 49%;
+                border: 2px outset;
+                margin: 3px;
+                float: left;
+                height: auto;
+            }
+            p{
+                background: linear-gradient(to left, aqua, white) ;
+                text-align: center;
+                padding: 5px;
+                border-radius:15px;
+                margin: 5px 30px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="cajita">
+            <h1>Factiriales</h1>
+            <form action="">
+                <input type="text" id="n" value="3">
+                <input type="button" value="=" onclick="llenar()">
+            </form>
+            <label for="">Los resultados son</label>
+            <p id="res"></p>
+            <label for="">Los factoriales son</label>
+            <input type="button" value="fac" onclick="factoarray()">
+            <p id="facto"></p>
+            <label for="">Los Capicua</label>
+            <input value="Procesar" type="button" onclick="algoritmo();" />
+            <p id="cadena1"></p>
+        </div>
+        <div class="cajita">
+            <form name="formulario1">
+                <input name="numero" id="nu" required="required" step="1"
+                    type="number" value="1001"
+                    placeholder="numero" />
+                <input value="Procesar" type="button" onclick="aolocapicua();"
+                    />
+            </form>
+            <p id="cadena"></p>
+        </div>
+        <div class="cajita">
+            <form action="">
+                <input class="in" type="text" placeholder="Introducir palabra."
+                    id="input-word" value="mariam"
+                    />
+                <input type="button"
+                    onclick="testCapCua(document.getElementById('input-word').value)"
+                    value="Comprobar"/>
+            </form>
+            <p id="cadena2"></p>
+        </div>
+        <div class="cajita">
+            <form action="">
+                <input type="text" id="s" value="4">
+                <input type="button" value="=" onclick="llenarl()">
+            </form>
+            <label for="">Los resultados son</label>
+            <p id="res1"></p>
+            <label for="">Palindromo</label>
+            <input type="button" value="pap" onclick="cap()">
+            <p id="pap"></p>
+        </div>
+        <div class="cajita">
+            <form action="">
+                <input type="button" value="Nombre" onclick="mostrar3()">
+            </form>
+            <label for="">Los resultados son</label>
+            <p id="saludo"></p>
+            <input type="button" value="Mostrar el resultado"
+                onclick="mostrar4()">
+            <div class="output">
+                <ul></ul>
+                <p></p>
+            </div>
+        </div>
+    </body>
+</html>

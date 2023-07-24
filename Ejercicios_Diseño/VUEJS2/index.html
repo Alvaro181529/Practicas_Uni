@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Document</title>
+  </head>
+  <body>
+
+    <div id="titulo">
+      hola {{nombre}} <br>
+      El titulo es {{titulo}} <br>
+      La Cantidad es {{cantidad >=1000 ? 'la cantidad es mayor o igual a      1000':'La cantidad es menor a 1000'}} <br>
+      La Cantidad es {{cantidad2 >=1000 ? 'la cantidad es mayor o igual a      1000':'La cantidad es menor a 1000'}} <br>
+      Mi saldo es {{saldo}} <br>
+      <hr>
+      <a v-bind:href="enlace"> ir a facebook</a> <br>
+      <a :href="enlace2"> ir a youtube</a> <br>
+      <hr>
+      <h4 v-if=estado> cuenta activa </h4>
+      <h4 v-else=estado> cuenta inactiva</h4>
+      <hr>
+      <h4 v-if="cantidad2>500"> 
+        La Cantidad es {{cantidad2}} 
+      </h4>
+      <h4 v-else-if="cantidad2 <500 && cantidad2>0">
+        cantidad:
+        <span style="color: red;">{{cantidad2}}</span>
+      </h4>
+      <h4 v-else>
+        Sin cantidad{{cantidad2}}
+      </h4>
+      <hr>
+      <h3>Servicios disponibles</h3>
+      <ul><li v-for="item in servicio">
+          {{item}}
+        </li></ul>
+      <h3>Servicios disponibles indice</h3>
+      <ul><li v-for="(item,index) in servicio" :key="index">
+          {{index}} {{item}}
+        </li></ul>
+      <hr>
+      <h3>
+        <button @click="agregarSaldo">Agregar Saldo</button>
+        <button v-if="cantidad2>=100" @click="restarSaldo">Restar Saldo</button>
+        <button v-if="cantidad2<=0" disabled @click="restarSaldo">Restar Saldo</button>
+      </h3>
+    </div>
+    <script>
+      // const holamundo={
+      //   data(){
+      //     return {
+      //       nombre:"alvaro"
+      //     }
+      //   }
+      // }
+      // var mountedApp=Vue.createApp(holamundo).mount('#app');
+
+      const app = Vue.createApp(
+       {
+        data(){
+          return{
+            nombre: "alvaro",
+            titulo: "Este es un hola mundo",
+            cantidad:1000,
+            cantidad2:100,
+            saldo: 500,
+            enlace:"https://facebook.com/",
+            enlace2:"https://youtube.com/",
+            estado: false,
+            servicio:['transferencias','pagos','giros'],
+
+          }
+        },
+        methods:{
+          agregarSaldo()
+          {
+            this.cantidad2 = this.cantidad2+100
+
+          },
+          restarSaldo(){
+            this.cantidad2 = this.cantidad2-100;
+            }
+          }
+       } 
+      )
+      
+      const mountedApp = app.mount('#titulo');
+      </script>
+  </body>
+</html>

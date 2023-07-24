@@ -1,0 +1,13 @@
+    body{
+        background-color: cadetblue;
+        background: linear-gradient(to left, cadetblue, white);
+    }
+    footer {
+        text-align: center;
+        text-shadow: 5px 2px 5px #212121 ;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 40px;
+        color: #585858;
+    }

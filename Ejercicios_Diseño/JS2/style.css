@@ -1,0 +1,24 @@
+body{
+    background: #eaeaea;
+}
+.in{
+    outline: none;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 5px;
+    height: 15px;
+}
+.cajita{
+    width: 49%;
+    border: 2px outset;
+    margin: 3px;
+    float: left;
+    height: auto;
+}
+p{
+    background: linear-gradient(to left, aqua, white) ;
+    text-align: center;
+    padding: 5px;
+    border-radius:15px;
+    margin: 5px 30px;
+}

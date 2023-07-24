@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Propiedades con html</title>
+
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        color: aliceblue;
+      }
+      .flex-container {
+        display: flex;
+        align-items: stretch;
+      }
+      header,
+      nav,
+      aside,
+      article,
+      footer,
+      section {
+        background: #ec4e4e;
+        color: aliceblue;
+        border-radius: 20px;
+        text-align: center;
+        margin: 10px;
+        padding: 25px;
+        border: 2px #7e2502 solid;
+      }
+      article {
+        padding: 25px 25px 0px 25px;
+      }
+      nav {
+        display: flex;
+        flex-direction: row;
+      }
+      section {
+        background: #e03113;
+      }
+      aside {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+      main {
+        background: #9c340b;
+        color: aliceblue;
+        border-radius: 50px;
+        text-align: center;
+        border: 2px #c27658 solid;
+        margin: 8px;
+        padding: 20px;
+      }
+      .texto {
+        writing-mode: vertical-lr;
+        text-align: justify;
+      }
+      figure {
+        background: #d67c15;
+        color: aliceblue;
+        border-radius: 20px;
+        text-align: center;
+        border: 2px #ad4319 solid;
+        margin: 10px;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 align="center" style="color: #b8b8b8; text-shadow: 1px 2px #000;">
+      Manera correcta de utilizar las etiquetas en
+      <cite>HTML</cite>
+    </h2>
+    <header>
+      Parte de arriba con &lt; header &gt;
+    </header>
+    <div class="flex-container">
+      <nav style="flex-grow: 1;">
+        <p class="texto">Parte de navegacion con &lt; nav &gt;</p>
+      </nav>
+      <main style="flex-grow: 100;">
+        Main con &lt; main &gt;
+        <section>
+          Seccion con &lt; section &gt;
+          <article>
+            Articulo con &lt; article &gt;
+            <figure>
+              Figura con &lt; figure &gt;
+            </figure>
+          </article>
+        </section>
+        <article style="padding: 25px;">
+          Articulo con &lt; article &gt;
+        </article>
+      </main>
+      <aside style="flex-grow: 1;">
+        <p class="texto">Parte del costado con &lt; aside &gt;</p>
+      </aside>
+    </div>
+    <footer>
+      parte de abajo con &lt; footer &gt;
+    </footer>
+  </body>
+</html>

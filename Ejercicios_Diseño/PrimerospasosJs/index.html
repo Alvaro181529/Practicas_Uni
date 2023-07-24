@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <!-- <script>
+        
+    </script> -->
+    </head>
+    <body>
+        <div class="cajita">
+            <legend>Alertas</legend>
+            <form action="">
+                <input type="num" id="num" name="num" value='3 + 6'>
+                <input type="button" value="mostrar" onclick="mostrar()">
+            </form>
+            <p id="res1"></p>
+        </div>
+        <div class="cajita">
+            <legend>Alertas</legend>
+
+            <input type="text" id="nombre" name="nombre" value="Alvaro">
+            <input type="button" value="mostrar" onclick="mostrar2()">
+            <p id="res2"></p>
+        </div>
+        <div class="cajita">
+            <legend>Operadores</legend>
+
+            <form action="">
+                <input type="text" id="num1" name="num1">
+                <input type="text" id="num2" name="num2">
+                <br>
+                <input type="button" class="boton" value="+"
+                    onclick="Suma();">
+                <input type="button" class="boton" value="-"
+                    onclick="Resta();">
+                <input type="button" class="boton" value="*"
+                    onclick="Multiplicacion();">
+                <input type="button" class="boton" value="/"
+                    onclick="Division();">
+                <input type="button" class="boton" value="Mod"
+                    onclick="Modulo();">
+            </form>
+            <p id="res"></p>
+        </div>
+        <div class="cajita">
+            <legend>Condicionales</legend>
+
+            <form action="">
+                <input type="text" id="con1" name="con1">
+                <input type="text" id="con2" name="con2">
+                <br>
+                <input type="button" class="boton" value=">"
+                onclick="Mayor();">
+                <input type="button" class="boton" value="<"
+                    onclick="Menor();">
+                <input type="button" class="boton" value="="
+                    onclick="Igual();">
+                <input type="button" class="boton" value="!="
+                    onclick="Diferente();">
+                <input type="button" class="boton" value="Mod"
+                    onclick="Modulo();">
+            </form>
+            <p id="res0"></p>
+        </div>
+        <div class="cajita" style="width: 60%;">
+            <legend>Ordenar con condicionales</legend>
+            <form action="">
+                <input type="text" id="num6" name="num6">
+                <input type="text" id="num7" name="num7">
+                <input type="text" id="num8" name="num8">
+                <br>
+                <input type="button" value="Start" onclick="Comparador()">
+                <input type="button" value="Order" onclick="Ordenar()">
+                <!-- <input type="button" class="boton" value="+"
+                    onclick="Suma();">
+                <input type="button" class="boton" value="-"
+                    onclick="Resta();">
+                <input type="button" class="boton" value="*"
+                    onclick="Multiplicacion();">
+                <input type="button" class="boton" value="/"
+                    onclick="Division();">
+                <input type="button" class="boton" value="Mod"
+                    onclick="Modulo();"> -->
+            </form>
+            <p id="res6"></p>
+
+            <p id="res7"></p>
+            <p id="res8"></p>
+        </div>
+
+        <div class="cajita" style="width: 60%;">
+            <legend>Ordenar con condicionales</legend>
+            <form action="">
+                <input type="text" id="num9" name="num9">
+                <input type="text" id="num10" name="num10">
+                <input type="text" id="num11" name="num11">
+                <input type="text" id="num12" name="num12">
+                <br>
+                <input type="button" value="Start" onclick="Comparador()">
+            </form>
+            <p id="res11"></p>
+            <p id="res7"></p>
+            <p id="res8"></p>
+        </div>
+    </body>
+</html>

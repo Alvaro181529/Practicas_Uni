@@ -1,0 +1,114 @@
+body {
+  background: linear-gradient(to left, #b1b118, #8fbb30);
+  color: aliceblue;
+  text-shadow: 2px 2px 1px black;
+  font-family: monospace;
+  padding: 0%;
+  margin: 0%;
+}
+
+nav {
+  text-align: center;
+}
+.barra ul {
+  display: flex;
+  position: fixed;
+  z-index: 999;
+  justify-content: center;
+  padding: 0%;
+  margin-top: 0%;
+  list-style-type: none;
+  width: 100%;
+  background: linear-gradient(to bottom, rgb(125, 248, 1), rgb(107, 120, 95));
+}
+
+.barra li,
+.barra li a {
+  float: left;
+  font-size: 20px;
+  text-decoration: none;
+  color: aliceblue;
+  padding: 0%;
+  height: 100%;
+}
+.barra li a {
+  display: inline-block;
+  padding: 10px 30px;
+}
+.barra li a:hover {
+  color: rgb(144, 249, 132);
+  background-color: rgb(186, 234, 138);
+  text-decoration: underline dashed rgb(144, 249, 132);
+}
+.cabecera {
+  background: linear-gradient(to right, #b9b888, #acd515);
+  margin-top: 25px;
+  height: 90px;
+  padding: 4px;
+  text-transform: uppercase;
+}
+main {
+  background: linear-gradient(to left, #5b4f3c, #7a9aaa);
+  height: 400px;
+  padding: 9px;
+}
+fieldset {
+  border-radius: 15px;
+  height: 95%;
+}
+.caja {
+  display: block;
+  float: left;
+  border: 2px outset black;
+  border-radius: 30px;
+  box-shadow: 14px 10px 5px 5px black;
+  height: 299px;
+  padding: 20px;
+  margin-top: 20px;
+}
+.seccion {
+  margin-right: 5%;
+  width: 55%;
+  background: linear-gradient(
+    to top,
+    rgba(248, 68, 68, 0.7),
+    rgba(140, 140, 140, 0.7)
+  );
+}
+.cajita {
+  display: flex;
+  float: left;
+  height: 30px;
+  background: white;
+  margin: 14px;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.corto {
+  width: 43%;
+}
+.largo{
+    width: 93%;
+}
+.seccion1 {
+  margin-left: 5%;
+  width: 25%;
+  background: linear-gradient(
+    to bottom   ,
+    rgba(0, 225, 255, 0.587),
+    rgba(207, 203, 203, 0.7)
+  );
+}
+aside {
+  background: linear-gradient(to right, grey, white);
+  padding: 10px;
+  border-radius: 5px;
+  height: 90%;
+}
+footer{
+    width: 100%;
+    background: salmon;
+    text-align: center;
+    font-size: 40px;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <div class="cajita">
+            <form action="">
+                <legend>Calculadora</legend>
+                <label for="num1"></label>
+                <input class="in" type="text" id="num1" value="2">
+                <select name="sel" id="sel">
+                    <option value="rest" selected>-</option>
+                    <option value="sum">+</option>
+                    <option value="mul">*</option>
+                    <option value="div">/</option>
+                    <option value="mod">%</option>
+                </select>
+                <label for="num2"></label>
+                <input class="in" type="text" id="num2" value="2">
+                <input type="button" value="=" onclick="Aritmetica()">
+            </form>
+            <p id="res"></p>
+        </div>
+        <div class="cajita">
+            <form action="">
+                <legend>Ordenar</legend>
+                <label for="num3"></label>
+                <input class="in" type="text" id="num3" value="2">
+                <label for="num4"></label>
+                <input class="in" type="text" id="num4" value="2">
+                <select name="sel" id="sel1">
+                    <option value="mayor" selected>Mayor</option>
+                    <option value="ordenar">Ordenar</option>
+                </select>
+                <input type="button" value="=" onclick="Numeros2()">
+            </form>
+            <p id="res1"></p>
+        </div>
+        <div class="cajita">
+            <form action="">
+                <legend>Ordenar</legend>
+
+                <input class="in" type="text" id="num5" value="2">
+                <input class="in" type="text" id="num6" value="2">
+                <input class="in" type="text" id="num7" value="2">
+                <select name="sel" id="sel2">
+                    <option value="mayor" selected>Mayor</option>
+                    <option value="ordenar">Ordenar</option>
+                </select>
+                <input type="button" value="=" onclick="Numeros3()">
+            </form>
+            <p id="res2"></p>
+        </div>
+        <div class="cajita">
+            <form action="">
+                <legend>Ordenar</legend>
+
+                <input class="in" type="text" id="num8" value="2">
+                <input class="in" type="text" id="num9" value="2">
+                <input class="in" type="text" id="num10" value="2">
+                <input class="in" type="text" id="num11" value="2">
+                <select name="sel" id="sel3">
+                    <option value="mayor" selected>Mayor</option>
+                    <option value="ordenar">Ordenar</option>
+                </select>
+                <input type="button" value="=" onclick="Numeros4()">
+            </form>
+            <p id="res3"></p>
+        </div>
+    </body>
+</html>

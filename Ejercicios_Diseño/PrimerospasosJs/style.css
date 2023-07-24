@@ -1,0 +1,31 @@
+body {
+  background: linear-gradient(
+    to left,
+    rgba(23, 23, 23, 0.7),
+    rgba(0, 0, 0, 0.7)
+  );
+}
+.cajita {
+  border: 4px inset rgb(77, 68, 68);
+  box-shadow: 0px 0px 8px 5px rgba(255, 255, 255, 0.5);
+  margin: 10px;
+  padding: 5px;
+  height: 200px;
+  width: 30%;
+  float: left;
+}
+input {
+  border-radius: 20px;
+  margin: 10px;
+  padding: auto;
+  height: 25px;
+}
+.boton {
+    align-items: center;
+    width: 35px;
+}
+p , legend{
+  color: aliceblue;
+  text-align: center;
+  text-transform: uppercase;
+}
