@@ -20,6 +20,4 @@ Participé en prácticas de maquetado, donde diseñé y estructuré páginas web
 ## Reflexiones
 Cada uno de estos ejercicios no solo me brindó experiencia práctica, sino que también me ayudó a desarrollar habilidades críticas para mi carrera. Estoy agradecido por las oportunidades de aprendizaje y la experiencia adquirida.
 
----
-
-Si deseas más detalles sobre algún proyecto en particular o si tienes alguna pregunta, ¡no dudes en contactarme!
+Para ver más detalles sobre mis proyectos, visita mi [Ejercicios aquí](https://alvaro181529.github.io/Practicas_Uni/).
