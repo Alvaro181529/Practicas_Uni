@@ -16,6 +16,7 @@ document.getElementById("sumButton").addEventListener("click", function () {
   let totalIntra = 0;
   let totalInter = 0;
   let total = 0;
+  let myChart;
 
   // INTELIGENCIA LINGUISTICA
   divLin.forEach((div) => {
@@ -86,6 +87,7 @@ document.getElementById("sumButton").addEventListener("click", function () {
 
   // Mostrar los resultados en el modal
   function showModal() {
+    // Destruir el gráfico anterior si existe
     const modalResults = document.getElementById("modalResults");
     modalResults.innerHTML = ""; // Limpiar resultados anteriores
 
@@ -96,15 +98,14 @@ document.getElementById("sumButton").addEventListener("click", function () {
     topThree.forEach((item, index) => {
       const position = index === 0 ? "1er" : index === 1 ? "2do" : "3ro";
       // modalResults.innerHTML += `La inteligencia que domina más es la ${item.inteligencia} en el ${position} lugar con el valor: ${item.value}<br>`;
-
-      // Agregar los datos al gráfico
       labels.push(item.inteligencia);
       values.push(item.value);
     });
 
-    // Mostrar el gráfico
     const ctx = document.getElementById("myChart").getContext("2d");
-    new Chart(ctx, {
+
+    // Crear un nuevo gráfico
+    myChart = new Chart(ctx, {
       type: "bar", // Tipo de gráfico
       data: {
         labels: labels, // Etiquetas de las barras
@@ -130,9 +131,9 @@ document.getElementById("sumButton").addEventListener("click", function () {
     const modal = document.getElementById("myModal");
     modal.style.display = "block"; // Mostrar el modal
   }
-
   // Cerrar el modal
   function closeModal() {
+    myChart.destroy();
     const modal = document.getElementById("myModal");
     modal.style.display = "none";
   }
