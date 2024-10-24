@@ -89,9 +89,42 @@ document.getElementById("sumButton").addEventListener("click", function () {
     const modalResults = document.getElementById("modalResults");
     modalResults.innerHTML = ""; // Limpiar resultados anteriores
 
+    // Crear un array para los datos del gráfico
+    const labels = [];
+    const values = [];
+
     topThree.forEach((item, index) => {
       const position = index === 0 ? "1er" : index === 1 ? "2do" : "3ro";
-      modalResults.innerHTML += `La inteligencia que domina más es la ${item.inteligencia} en el ${position} lugar con el valor: ${item.value}<br>`;
+      // modalResults.innerHTML += `La inteligencia que domina más es la ${item.inteligencia} en el ${position} lugar con el valor: ${item.value}<br>`;
+
+      // Agregar los datos al gráfico
+      labels.push(item.inteligencia);
+      values.push(item.value);
+    });
+
+    // Mostrar el gráfico
+    const ctx = document.getElementById("myChart").getContext("2d");
+    new Chart(ctx, {
+      type: "bar", // Tipo de gráfico
+      data: {
+        labels: labels, // Etiquetas de las barras
+        datasets: [
+          {
+            label: "Valores de Inteligencia",
+            data: values, // Datos para las barras
+            backgroundColor: "rgba(75, 192, 192, 0.2)",
+            borderColor: "rgba(75, 192, 192, 1)",
+            borderWidth: 1,
+          },
+        ],
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+      },
     });
 
     const modal = document.getElementById("myModal");

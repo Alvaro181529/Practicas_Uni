@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Prueba de Inteligencias Múltiples</title>
         <link rel="stylesheet" href="index.css" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script defer src="index.js"></script>
     </head>
     <body>
@@ -286,8 +287,8 @@
             </div>
             <div class="inInter">
                 <label
-                    >¿Te consideras una persona que escucha y comprende bien a
-                    los demás?</label
+                    >¿Disfrutas trabajando en equipo para lograr objetivos
+                    comunes?</label
                 >
                 <select name="q1">
                     <option value="0">No</option>
@@ -297,8 +298,8 @@
             </div>
             <div class="inInter">
                 <label
-                    >¿Disfrutas trabajando en equipo para lograr objetivos
-                    comunes?</label
+                    >¿Te consideras una persona que escucha y comprende bien a
+                    los demás?</label
                 >
                 <select name="q1">
                     <option value="0">No</option>
@@ -361,28 +362,25 @@
                     <option value="0.5">Tal vez</option>
                 </select>
             </div>
-            <div class="inNat">
-                <label
-                    >¿Te gusta identificar diferentes especies de plantas o
-                    animales cuando sales a la naturaleza?</label
-                >
-                <select name="q1">
-                    <option value="0">No</option>
-                    <option value="1">Sí</option>
-                    <option value="0.5">Tal vez</option>
-                </select>
-            </div>
+
             <button id="sumButton">Calcualar y mostrar resultados</button>
             <button id="showModalButton" style="display: none">
                 Mostrar Resultados
             </button>
         </div>
 
-        <!-- El Modal -->
+        <!-- El Modal
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <div id="modalResults"></div>
+            </div>
+            </div>-->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div id="modalResults"></div>
+                <canvas id="myChart" width="400" height="200"></canvas>
             </div>
         </div>
     </body>
