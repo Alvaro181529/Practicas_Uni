@@ -20,6 +20,10 @@
 .hidden-description {
     display: none; /* Oculta los elementos con esta clase */
 }
+strong {
+    text-decoration: underline;
+    text-decoration-color: gray;
+}
 strong:hover {
     color: #4f46e5;
     text-decoration: underline;
