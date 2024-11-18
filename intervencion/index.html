@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Intervención psicologica</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="index.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <script
+            defer
+            type="module"
+            src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"
+        ></script>
+        <script defer src="index.js"></script>
+    </head>
+    <body class="bg-gradient-to-b from-blue-100 to-purple-100">
+        <!-- Header -->
+        <header class="bg-white shadow">
+            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                <h1 class="text-3xl font-bold text-gray-900">
+                    Proyecto de Intervención Psicopedagógica para Dificultades
+                    de Aprendizaje Musicales
+                </h1>
+            </div>
+        </header>
+
+        <!-- Main content -->
+        <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+            <div class="tabs">
+                <!-- Tab Buttons -->
+                <div class="tab-buttons flex flex-wrap mb-4">
+                    <div
+                        class="tab-button active"
+                        onclick="switchTab('inicio')"
+                    >
+                        Inicio
+                    </div>
+                    <div class="tab-button" onclick="switchTab('cuerdas')">
+                        Instrumentos de Cuerda
+                    </div>
+                    <div class="tab-button" onclick="switchTab('viento')">
+                        Instrumentos de Viento
+                    </div>
+                    <div class="tab-button" onclick="switchTab('percusion')">
+                        Instrumentos de Percusión
+                    </div>
+                    <div class="tab-button" onclick="switchTab('tecnicas')">
+                        Técnicas Generales
+                    </div>
+                    <div class="tab-button" onclick="switchTab('teoria')">
+                        Teoría Musical
+                    </div>
+                </div>
+
+                <!-- Tab Content -->
+                <div id="inicio" class="tab-content active">
+                    <div class="card bg-white shadow p-6 mb-4">
+                        <h2 class="text-xl font-bold">
+                            Bienvenidos a nuestro proyecto
+                        </h2>
+                        <p class="mt-2">
+                            Explora nuestras estrategias para superar las
+                            dificultades de aprendizaje en música.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="card bg-white shadow p-6">
+                            <h3 class="font-semibold flex items-center">
+                                <span class="h-6 w-6 mr-2">📚</span>
+                                Contenido Interactivo
+                            </h3>
+                            <p>
+                                Disfruta de nuestro contenido en formato de
+                                libro digital con imágenes, videos y elementos
+                                interactivos.
+                            </p>
+                        </div>
+                        <div class="card bg-white shadow p-6">
+                            <h3 class="font-semibold flex items-center">
+                                <span class="h-6 w-6 mr-2">🎵</span>
+                                Grupos Instrumentales
+                            </h3>
+                            <p>
+                                Explora técnicas específicas para instrumentos
+                                de cuerda, viento y percusión.
+                            </p>
+                        </div>
+                        <div class="card bg-white shadow p-6">
+                            <h3 class="font-semibold flex items-center">
+                                <span class="h-6 w-6 mr-2">🧠</span>
+                                Estrategias de Aprendizaje
+                            </h3>
+                            <p>
+                                Descubre métodos efectivos para superar
+                                dificultades en el aprendizaje musical.
+                            </p>
+                        </div>
+                        <div class="card bg-white shadow p-6">
+                            <h3 class="font-semibold flex items-center">
+                                <span class="h-6 w-6 mr-2">🎥</span>
+                                Contenido Multimedia
+                            </h3>
+                            <p>
+                                Accede a videos demostrativos y recursos
+                                adicionales para mejorar tu aprendizaje.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secciones adicionales -->
+                <div id="cuerdas" class="tab-content">
+                    <div class="card bg-white shadow p-6 mb-4">
+                        <h2 class="text-xl font-bold">
+                            Instrumentos de Cuerda
+                        </h2>
+                        <p>
+                            Contenido detallado sobre técnicas y métodos para
+                            instrumentos de cuerda.
+                        </p>
+                    </div>
+                </div>
+                <div id="viento" class="tab-content">
+                    <div class="card bg-white shadow p-6 mb-4">
+                        <h2 class="text-xl font-bold">
+                            Instrumentos de Viento
+                        </h2>
+                        <p>
+                            Contenido detallado sobre técnicas y métodos para
+                            instrumentos de viento.
+                        </p>
+                    </div>
+                </div>
+                <div id="percusion" class="tab-content">
+                    <div class="card bg-white shadow p-6 mb-4">
+                        <h2 class="text-xl font-bold">
+                            Instrumentos de Percusión
+                        </h2>
+                        <p>
+                            Contenido detallado sobre técnicas y métodos para
+                            instrumentos de percusión.
+                        </p>
+                    </div>
+                </div>
+                <div id="tecnicas" class="tab-content">
+                    <div class="card bg-white shadow p-6 mb-4">
+                        <h2 class="text-xl font-bold">Técnicas Generales</h2>
+                        <p>
+                            Contenido detallado sobre técnicas generales
+                            aplicables a todos los instrumentos.
+                        </p>
+                    </div>
+                </div>
+                <div id="teoria" class="tab-content">
+                    <div class="card bg-white shadow p-6 mb-4">
+                        <h2 class="text-xl font-bold">Teoría Musical</h2>
+                        <p>
+                            Contenido detallado sobre teoría musical y su
+                            aplicación en el aprendizaje musical.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script
+        defer
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"
+    ></script>
+</html>
