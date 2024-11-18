@@ -35,9 +35,11 @@
 
         <!-- Main content -->
         <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-            <div class="tabs">
+            <div class="tabs max-w-7xl">
                 <!-- Tab Buttons -->
-                <div class="tab-buttons flex flex-wrap mb-4">
+                <div
+                    class="tab-buttons flex flex-wrap text-center sm:flex-nowrap gap-y-2 mb-4 w-full"
+                >
                     <div
                         class="tab-button active"
                         onclick="switchTab('inicio')"
@@ -45,19 +47,10 @@
                         Inicio
                     </div>
                     <div class="tab-button" onclick="switchTab('cuerdas')">
-                        Instrumentos de Cuerda
-                    </div>
-                    <div class="tab-button" onclick="switchTab('viento')">
-                        Instrumentos de Viento
-                    </div>
-                    <div class="tab-button" onclick="switchTab('percusion')">
-                        Instrumentos de Percusión
+                        Instrumento
                     </div>
                     <div class="tab-button" onclick="switchTab('tecnicas')">
                         Técnicas Generales
-                    </div>
-                    <div class="tab-button" onclick="switchTab('teoria')">
-                        Teoría Musical
                     </div>
                 </div>
 
@@ -73,7 +66,10 @@
                         </p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="card bg-white shadow p-6">
+                        <div
+                            class="card bg-white shadow p-6 cursor-pointer"
+                            onclick="switchTab('tecnicas')"
+                        >
                             <h3 class="font-semibold flex items-center">
                                 <span class="h-6 w-6 mr-2">📚</span>
                                 Contenido Interactivo
@@ -84,17 +80,23 @@
                                 interactivos.
                             </p>
                         </div>
-                        <div class="card bg-white shadow p-6">
+                        <div
+                            class="card bg-white shadow p-6 cursor-pointer"
+                            onclick="switchTab('cuerdas')"
+                        >
                             <h3 class="font-semibold flex items-center">
                                 <span class="h-6 w-6 mr-2">🎵</span>
-                                Grupos Instrumentales
+                                Grupos Instrumental
                             </h3>
                             <p>
-                                Explora técnicas específicas para instrumentos
-                                de cuerda, viento y percusión.
+                                Explora técnicas específicas para tu intrumento
+                                de guitarra.
                             </p>
                         </div>
-                        <div class="card bg-white shadow p-6">
+                        <div
+                            class="card bg-white shadow p-6 cursor-pointer"
+                            onclick="switchTab('tecnicas')"
+                        >
                             <h3 class="font-semibold flex items-center">
                                 <span class="h-6 w-6 mr-2">🧠</span>
                                 Estrategias de Aprendizaje
@@ -104,7 +106,10 @@
                                 dificultades en el aprendizaje musical.
                             </p>
                         </div>
-                        <div class="card bg-white shadow p-6">
+                        <div
+                            class="card bg-white shadow p-6 cursor-pointer"
+                            onclick="switchTab('tecnicas')"
+                        >
                             <h3 class="font-semibold flex items-center">
                                 <span class="h-6 w-6 mr-2">🎥</span>
                                 Contenido Multimedia
@@ -128,39 +133,49 @@
                             instrumentos de cuerda.
                         </p>
                     </div>
-                </div>
-                <div id="viento" class="tab-content">
                     <div class="card bg-white shadow p-6 mb-4">
                         <h2 class="text-xl font-bold">
-                            Instrumentos de Viento
+                            Instrumentos de Cuerda
                         </h2>
                         <p>
                             Contenido detallado sobre técnicas y métodos para
-                            instrumentos de viento.
+                            instrumentos de cuerda.
                         </p>
                     </div>
-                </div>
-                <div id="percusion" class="tab-content">
                     <div class="card bg-white shadow p-6 mb-4">
                         <h2 class="text-xl font-bold">
-                            Instrumentos de Percusión
+                            Instrumentos de Cuerda
                         </h2>
                         <p>
                             Contenido detallado sobre técnicas y métodos para
-                            instrumentos de percusión.
+                            instrumentos de cuerda.
                         </p>
                     </div>
                 </div>
                 <div id="tecnicas" class="tab-content">
                     <div class="card bg-white shadow p-6 mb-4">
-                        <h2 class="text-xl font-bold">Técnicas Generales</h2>
+                        <h2 class="text-xl font-bold">Teoría Musical</h2>
                         <p>
-                            Contenido detallado sobre técnicas generales
-                            aplicables a todos los instrumentos.
+                            Contenido detallado sobre teoría musical y su
+                            aplicación en el aprendizaje musical.
                         </p>
                     </div>
-                </div>
-                <div id="teoria" class="tab-content">
+                    <section class="card bg-white shadow p-6 mb-4">
+                        <h2 class="text-xl font-bold mb-4">Videos</h2>
+                        <div class="gap-4 grid sm:grid-cols-2 grid-cols-1">
+                            <div>
+                                <lite-youtube
+                                    videoid="x2caFEUK6zg"
+                                ></lite-youtube>
+                            </div>
+                            <div>
+                                <lite-youtube
+                                    videoid="x2caFEUK6zg"
+                                ></lite-youtube>
+                            </div>
+                        </div>
+                    </section>
+
                     <div class="card bg-white shadow p-6 mb-4">
                         <h2 class="text-xl font-bold">Teoría Musical</h2>
                         <p>
