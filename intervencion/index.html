@@ -4,12 +4,6 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Intervención psicologica</title>
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-            crossorigin="anonymous"
-        />
         <link rel="stylesheet" href="index.css" />
         <link
             href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
@@ -22,7 +16,7 @@
         ></script>
         <script defer src="index.js"></script>
     </head>
-    <body class="bg-gradient-to-b from-blue-100 to-purple-100">
+    <body class="bg-gradient-to-b from-blue-100 to-purple-100 min-h-screen">
         <!-- Header -->
         <header class="bg-white shadow">
             <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
@@ -46,40 +40,29 @@
                     >
                         Inicio
                     </div>
+                    <div class="tab-button" onclick="switchTab('estrategias')">
+                        Estrategias
+                    </div>
                     <div class="tab-button" onclick="switchTab('cuerdas')">
                         Instrumento
                     </div>
                     <div class="tab-button" onclick="switchTab('tecnicas')">
-                        Técnicas Generales
+                        Técnicas
                     </div>
                 </div>
 
                 <!-- Tab Content -->
                 <div id="inicio" class="tab-content active">
                     <div class="card bg-white shadow p-6 mb-4">
-                        <h2 class="text-xl font-bold">
-                            Bienvenidos a nuestro proyecto
-                        </h2>
                         <p class="mt-2">
-                            Explora nuestras estrategias para superar las
-                            dificultades de aprendizaje en música.
+                            A través de este documento, que se ha estructurado
+                            de manera colaborativa, se busca ofrecer soluciones
+                            prácticas, basadas en nuestras experiencias
+                            personales y enfoques psicopedagógicos probados,
+                            para mejorar el rendimiento académico y musical
                         </p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div
-                            class="card bg-white shadow p-6 cursor-pointer"
-                            onclick="switchTab('tecnicas')"
-                        >
-                            <h3 class="font-semibold flex items-center">
-                                <span class="h-6 w-6 mr-2">📚</span>
-                                Contenido Interactivo
-                            </h3>
-                            <p>
-                                Disfruta de nuestro contenido en formato de
-                                libro digital con imágenes, videos y elementos
-                                interactivos.
-                            </p>
-                        </div>
                         <div
                             class="card bg-white shadow p-6 cursor-pointer"
                             onclick="switchTab('cuerdas')"
@@ -95,7 +78,7 @@
                         </div>
                         <div
                             class="card bg-white shadow p-6 cursor-pointer"
-                            onclick="switchTab('tecnicas')"
+                            onclick="switchTab('estrategias')"
                         >
                             <h3 class="font-semibold flex items-center">
                                 <span class="h-6 w-6 mr-2">🧠</span>
@@ -105,6 +88,16 @@
                                 Descubre métodos efectivos para superar
                                 dificultades en el aprendizaje musical.
                             </p>
+                        </div>
+                        <div
+                            class="card bg-white shadow p-6 cursor-pointer"
+                            onclick="switchTab('tecnicas')"
+                        >
+                            <h3 class="font-semibold flex items-center">
+                                <span class="h-6 w-6 mr-2">📚</span>
+                                Contenido Interactivo
+                            </h3>
+                            <p>Disfruta de nuestro contenido de videos</p>
                         </div>
                         <div
                             class="card bg-white shadow p-6 cursor-pointer"
@@ -123,41 +116,466 @@
                 </div>
 
                 <!-- Secciones adicionales -->
+                <div id="estrategias" class="tab-content">
+                    <div class="card bg-white shadow p-6 mb-4">
+                        <h2 class="text-xl font-bold">Estrategias</h2>
+                        <p>
+                            Dificultades que los estudiantes pueden experimentar
+                            en su aprendizaje musical y como afrontarlas
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-white shadow p-6 mb-6">
+                            <h2
+                                class="text-xl font-bold mb-4 cursor-pointer"
+                                onclick="toggleSection('dificultades')"
+                            >
+                                Dificultades en el Aprendizaje Musical
+                            </h2>
+
+                            <ul class="list-inside list-disc space-y-3 mb-4">
+                                <!-- Dificultad: Lectura Musical -->
+                                <li>
+                                    <strong
+                                        class="cursor-pointer"
+                                        onclick="toggleDescription(this)"
+                                    >
+                                        Dificultades de Lectura Musical:
+                                    </strong>
+                                    <p class="hidden-description">
+                                        Muchos estudiantes encuentran complicado
+                                        interpretar partituras debido a la
+                                        complejidad de los símbolos musicales,
+                                        la notación o el ritmo. La lectura
+                                        musical implica reconocer notas, pausas,
+                                        claves, compases y más. A menudo, los
+                                        estudiantes luchan por asociar los
+                                        símbolos con los sonidos correctos y el
+                                        ritmo adecuado.
+                                    </p>
+                                </li>
+
+                                <!-- Dificultad: Memorización -->
+                                <li>
+                                    <strong
+                                        class="cursor-pointer"
+                                        onclick="toggleDescription(this)"
+                                    >
+                                        Dificultades en la Memorización:
+                                    </strong>
+                                    <p class="hidden-description">
+                                        Algunos estudiantes tienen problemas
+                                        para recordar secuencias melódicas,
+                                        acordes o patrones rítmicos. La memoria
+                                        musical es esencial para poder tocar sin
+                                        partitura, pero la dificultad para
+                                        recordar las secuencias puede retrasar
+                                        el progreso. El refuerzo a través de
+                                        ejercicios de repetición puede ser
+                                        crucial.
+                                    </p>
+                                </li>
+
+                                <!-- Dificultad: Coordinación Motora -->
+                                <li>
+                                    <strong
+                                        class="cursor-pointer"
+                                        onclick="toggleDescription(this)"
+                                    >
+                                        Problemas de Coordinación Motora:
+                                    </strong>
+                                    <p class="hidden-description">
+                                        Específicamente para los músicos de
+                                        instrumentos, la coordinación entre las
+                                        manos, los pies y los oídos puede ser un
+                                        desafío. Esto se vuelve especialmente
+                                        notorio en instrumentos que requieren el
+                                        uso simultáneo de ambas manos, como el
+                                        piano o la guitarra, donde cada mano
+                                        realiza tareas independientes.
+                                    </p>
+                                </li>
+
+                                <!-- Dificultad: Comprensión Teórica -->
+                                <li>
+                                    <strong
+                                        class="cursor-pointer"
+                                        onclick="toggleDescription(this)"
+                                    >
+                                        Falta de Comprensión Teórica:
+                                    </strong>
+                                    <p class="hidden-description">
+                                        Los estudiantes pueden tener
+                                        dificultades para entender la teoría
+                                        musical, lo que afecta su capacidad para
+                                        analizar o componer música. La teoría
+                                        musical incluye conceptos como la
+                                        armonía, la escala, la estructura de las
+                                        canciones y cómo se relacionan las notas
+                                        entre sí, lo cual puede ser un desafío
+                                        para muchos estudiantes.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-white shadow p-6 mb-6">
+                            <h2
+                                class="text-xl font-bold mb-4 cursor-pointer"
+                                onclick="toggleSection('estrategias')"
+                            >
+                                Estrategias para Superar Estas Dificultades
+                            </h2>
+
+                            <ul class="list-inside list-disc space-y-3 mb-4">
+                                <!-- Estrategia: Visualización -->
+                                <li>
+                                    <strong
+                                        class="cursor-pointer"
+                                        onclick="toggleDescription(this)"
+                                    >
+                                        Uso de Visualización:
+                                    </strong>
+                                    <p class="hidden-description">
+                                        Ayudar a los estudiantes a visualizar
+                                        las notas musicales en el teclado o en
+                                        el instrumento puede facilitar la
+                                        comprensión de la lectura musical.
+                                        Visualizar las notas y sus posiciones
+                                        permite que los estudiantes comprendan
+                                        de manera más rápida y efectiva cómo se
+                                        deben tocar las partituras.
+                                    </p>
+                                </li>
+
+                                <!-- Estrategia: Repetición Espaciada -->
+                                <li>
+                                    <strong
+                                        class="cursor-pointer"
+                                        onclick="toggleDescription(this)"
+                                    >
+                                        Repetición Espaciada:
+                                    </strong>
+                                    <p class="hidden-description">
+                                        Usar la técnica de repetición espaciada
+                                        para reforzar la memorización de
+                                        patrones rítmicos y melódicos. Esto
+                                        implica practicar las mismas secuencias
+                                        en intervalos de tiempo cada vez
+                                        mayores, lo que ayuda a consolidar la
+                                        memoria de largo plazo y a mejorar la
+                                        retención de la música.
+                                    </p>
+                                </li>
+
+                                <!-- Estrategia: Entrenamiento de Coordinación -->
+                                <li>
+                                    <strong
+                                        class="cursor-pointer"
+                                        onclick="toggleDescription(this)"
+                                    >
+                                        Entrenamiento de Coordinación:
+                                    </strong>
+                                    <p class="hidden-description">
+                                        Utilizar ejercicios específicos que
+                                        ayuden a los estudiantes a mejorar la
+                                        coordinación motora, tales como
+                                        ejercicios de ritmo con palmas o
+                                        ejercicios de mano izquierda y derecha
+                                        para pianistas. Estos ejercicios ayudan
+                                        a sincronizar los movimientos de las
+                                        manos, los pies y los oídos, lo que
+                                        mejora la habilidad para tocar música de
+                                        manera fluida.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
                 <div id="cuerdas" class="tab-content">
                     <div class="card bg-white shadow p-6 mb-4">
-                        <h2 class="text-xl font-bold">
-                            Instrumentos de Cuerda
-                        </h2>
+                        <h2 class="text-xl font-bold">Instrumento</h2>
                         <p>
                             Contenido detallado sobre técnicas y métodos para
                             instrumentos de cuerda.
                         </p>
                     </div>
-                    <div class="card bg-white shadow p-6 mb-4">
-                        <h2 class="text-xl font-bold">
-                            Instrumentos de Cuerda
-                        </h2>
-                        <p>
-                            Contenido detallado sobre técnicas y métodos para
-                            instrumentos de cuerda.
-                        </p>
+                    <div
+                        class="card bg-white shadow p-6 mb-4 gap-4 grid sm:grid-cols-2 grid-cols-1"
+                    >
+                        <div class="p-6 mb-6">
+                            <h2 class="text-xl font-bold mb-6">
+                                Uso de Diagramas de Acordes
+                            </h2>
+
+                            <p class="mb-4">
+                                Los estudiantes que tocan instrumentos de cuerda
+                                se benefician enormemente del uso de diagramas
+                                de acordes. Estas representaciones visuales
+                                simplifican el proceso de aprendizaje,
+                                permitiendo a los músicos:
+                            </p>
+
+                            <ul class="list-inside list-disc space-y-2 mb-4">
+                                <li>
+                                    <strong
+                                        class="cursor-pointer"
+                                        onclick="toggleDescription(this)"
+                                        >Visualizar rápidamente la posición de
+                                        los dedos:</strong
+                                    >
+                                    <p class="hidden-description">
+                                        Los diagramas ofrecen una guía clara y
+                                        concisa sobre dónde colocar cada dedo en
+                                        el mástil del instrumento, evitando
+                                        confusiones y acelerando la
+                                        memorización.
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong
+                                        class="cursor-pointer"
+                                        onclick="toggleDescription(this)"
+                                        >Entender la estructura de los
+                                        acordes:</strong
+                                    >
+                                    <p class="hidden-description">
+                                        Al observar un diagrama, los estudiantes
+                                        pueden comprender cómo las notas se
+                                        combinan para formar diferentes acordes,
+                                        facilitando la transición entre ellos y
+                                        el desarrollo de una sólida base
+                                        musical.
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong
+                                        class="cursor-pointer"
+                                        onclick="toggleDescription(this)"
+                                        >Descubrir nuevas posibilidades:</strong
+                                    >
+                                    <p class="hidden-description">
+                                        Los diagramas de acordes abren un mundo
+                                        de posibilidades creativas, inspirando a
+                                        los músicos a experimentar con
+                                        diferentes voicings y armonías.
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong
+                                        class="cursor-pointer"
+                                        onclick="toggleDescription(this)"
+                                        >Superar obstáculos técnicos:</strong
+                                    >
+                                    <p class="hidden-description">
+                                        Los diagramas pueden ayudar a los
+                                        estudiantes a resolver problemas
+                                        técnicos específicos, como alcanzar
+                                        trastes difíciles o formar acordes
+                                        complejos.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <img
+                            src="https://comisariopantera.mx/wp-content/uploads/198130365-acorde-de-guitarra-basico-y-posicion-de-la-mano-para-el-vector-de-acordes-de-guitarra-aislado-sobre-2.jpg"
+                        />
                     </div>
-                    <div class="card bg-white shadow p-6 mb-4">
-                        <h2 class="text-xl font-bold">
-                            Instrumentos de Cuerda
-                        </h2>
-                        <p>
-                            Contenido detallado sobre técnicas y métodos para
-                            instrumentos de cuerda.
-                        </p>
+                    <div
+                        class="card bg-white shadow p-6 mb-4 gap-4 grid sm:grid-cols-2 grid-cols-1"
+                    >
+                        <div class="p-6 mb-6">
+                            <h2 class="text-xl font-bold mb-4">
+                                Ejercicios de Digitación
+                            </h2>
+
+                            <p class="mb-4">
+                                Repetir ejercicios de digitación lentamente, con
+                                un enfoque en la precisión, es una de las
+                                mejores maneras de mejorar tanto la agilidad
+                                como la memoria muscular
+                            </p>
+
+                            <p class="mb-4">
+                                Con una buena digitación, los músicos logran
+                                mayor control, fluidez y velocidad al tocar.
+                            </p>
+
+                            <ul class="list-inside list-disc space-y-3 mb-4">
+                                <li>
+                                    <strong
+                                        class="cursor-pointer"
+                                        onclick="toggleDescription(this)"
+                                        >Mejora de la agilidad:</strong
+                                    >
+                                    <p class="hidden-description">
+                                        Los ejercicios de digitación,
+                                        especialmente aquellos que se realizan
+                                        de manera repetitiva y lenta, permiten
+                                        que los dedos se vuelvan más ágiles.
+                                        Esto facilita la ejecución de pasajes
+                                        rápidos y complejos con mayor facilidad
+                                        y control.
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong
+                                        class="cursor-pointer"
+                                        onclick="toggleDescription(this)"
+                                        >Desarrollo de la memoria
+                                        muscular:</strong
+                                    >
+                                    <p class="hidden-description">
+                                        La repetición constante de movimientos
+                                        específicos ayuda a que los dedos
+                                        recuerden la posición correcta para cada
+                                        nota o acorde. Con el tiempo, los
+                                        movimientos se vuelven automáticos, lo
+                                        que reduce la necesidad de pensar en
+                                        cada paso al tocar.
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong
+                                        class="cursor-pointer"
+                                        onclick="toggleDescription(this)"
+                                        class="cursor-pointer"
+                                        onclick="toggleDescription(this)"
+                                        >Incremento de la precisión:</strong
+                                    >
+                                    <p class="hidden-description">
+                                        Practicar lentamente y con atención al
+                                        detalle permite mejorar la precisión en
+                                        la colocación de los dedos. Esto es
+                                        especialmente útil para evitar errores
+                                        técnicos, como las notas desafinadas o
+                                        las posiciones incorrectas de los dedos.
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong
+                                        class="cursor-pointer"
+                                        onclick="toggleDescription(this)"
+                                        class="cursor-pointer"
+                                        onclick="toggleDescription(this)"
+                                        >Prevención de lesiones:</strong
+                                    >
+                                    <p class="hidden-description">
+                                        La digitación incorrecta o apresurada
+                                        puede resultar en tensión muscular y
+                                        lesiones. Al practicar lentamente y con
+                                        una técnica adecuada, los músicos evitan
+                                        el esfuerzo excesivo y los movimientos
+                                        perjudiciales que pueden llevar a
+                                        lesiones en la mano, muñeca o brazo.
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong
+                                        class="cursor-pointer"
+                                        onclick="toggleDescription(this)"
+                                        >Mejora de la coordinación
+                                        mano-ojo:</strong
+                                    >
+                                    <p class="hidden-description">
+                                        Realizar ejercicios de digitación ayuda
+                                        a mejorar la coordinación entre la vista
+                                        y las manos, lo que es fundamental para
+                                        tocar de manera precisa, especialmente
+                                        cuando se lee partituras o se tocan
+                                        melodías complejas.
+                                    </p>
+                                </li>
+                            </ul>
+
+                            <p class="mb-4">
+                                Los ejercicios de digitación no solo se limitan
+                                a repetir una secuencia de movimientos. Para
+                                maximizar los beneficios, es esencial seguir
+                                algunos principios:
+                            </p>
+
+                            <ol class="list-inside list-decimal space-y-2 mb-4">
+                                <li>
+                                    <strong
+                                        class="cursor-pointer"
+                                        onclick="toggleDescription(this)"
+                                        class="cursor-pointer"
+                                        onclick="toggleDescription(this)"
+                                        >Comienza despacio:</strong
+                                    >
+                                    <p class="hidden-description">
+                                        Es importante comenzar a una velocidad
+                                        lenta para asegurar que cada movimiento
+                                        sea preciso y que los dedos estén
+                                        correctamente posicionados. La velocidad
+                                        puede aumentar gradualmente a medida que
+                                        la técnica se va perfeccionando.
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong
+                                        class="cursor-pointer"
+                                        onclick="toggleDescription(this)"
+                                        class="cursor-pointer"
+                                        onclick="toggleDescription(this)"
+                                        >Enfoque en la relajación:</strong
+                                    >
+                                    <p class="hidden-description">
+                                        Durante la práctica, los músicos deben
+                                        mantener las manos y los dedos
+                                        relajados. La tensión puede interferir
+                                        con la precisión y la velocidad, y
+                                        también puede conducir a lesiones a
+                                        largo plazo.
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong
+                                        class="cursor-pointer"
+                                        onclick="toggleDescription(this)"
+                                        class="cursor-pointer"
+                                        onclick="toggleDescription(this)"
+                                        >Practica con variaciones:</strong
+                                    >
+                                    <p class="hidden-description">
+                                        A medida que la digitación mejora, es
+                                        útil practicar con variaciones, como
+                                        cambiar la dirección de los movimientos
+                                        o agregar más notas para aumentar la
+                                        dificultad. Esto ayuda a desarrollar una
+                                        técnica más versátil.
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong
+                                        class="cursor-pointer"
+                                        onclick="toggleDescription(this)"
+                                        class="cursor-pointer"
+                                        onclick="toggleDescription(this)"
+                                        >Escucha y ajusta:</strong
+                                    >
+                                    <p class="hidden-description">
+                                        Mientras se realiza el ejercicio, es
+                                        importante escuchar la calidad del
+                                        sonido producido. Si las notas suenan
+                                        poco claras o desafinadas, es una señal
+                                        de que la digitación necesita ser
+                                        ajustada.
+                                    </p>
+                                </li>
+                            </ol>
+                        </div>
+                        <lite-youtube videoid="fuv_FvnQREA"></lite-youtube>
                     </div>
                 </div>
                 <div id="tecnicas" class="tab-content">
                     <div class="card bg-white shadow p-6 mb-4">
                         <h2 class="text-xl font-bold">Teoría Musical</h2>
                         <p>
-                            Contenido detallado sobre teoría musical y su
-                            aplicación en el aprendizaje musical.
+                            principales dificultades que los estudiantes pueden
+                            experimentar en su aprendizaje musical.
                         </p>
                     </div>
                     <section class="card bg-white shadow p-6 mb-4">
@@ -170,27 +588,23 @@
                             </div>
                             <div>
                                 <lite-youtube
-                                    videoid="x2caFEUK6zg"
+                                    videoid="YN4Q0DcOXJY"
                                 ></lite-youtube>
                             </div>
                         </div>
                     </section>
 
                     <div class="card bg-white shadow p-6 mb-4">
-                        <h2 class="text-xl font-bold">Teoría Musical</h2>
-                        <p>
-                            Contenido detallado sobre teoría musical y su
-                            aplicación en el aprendizaje musical.
-                        </p>
+                        <h2 class="text-xl font-bold">Recomendaciones</h2>
+                        <div>
+                            <lite-youtube videoid="ny61lc2xiZk"></lite-youtube>
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
+        <footer class="fixed bottom-0 left-0 w-full text-center p-4 text-white">
+            <p>Proyecto de Intervención Psicopedagógica | 2024</p>
+        </footer>
     </body>
-    <script
-        defer
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"
-    ></script>
 </html>

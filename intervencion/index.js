@@ -9,3 +9,16 @@ function switchTab(tabId) {
   );
   activeButton.classList.add("active");
 }
+function toggleDescription(strongElement) {
+  const description = strongElement.nextElementSibling; // Obtiene el <p> siguiente al <strong>
+
+  // Alterna la visibilidad del <p>
+  description.classList.toggle("hidden-description");
+
+  // Cambia el estilo del texto de <strong> para indicar que el contenido se expandió o colapsó
+  if (description.classList.contains("hidden-description")) {
+    strongElement.innerHTML = strongElement.innerHTML.replace(" -", ""); // Colapsa
+  } else {
+    strongElement.innerHTML += " -"; // Expande
+  }
+}
