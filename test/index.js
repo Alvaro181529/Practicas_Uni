@@ -127,7 +127,6 @@ document.getElementById("sumButton").addEventListener("click", function () {
         },
       },
     });
-
     const modal = document.getElementById("myModal");
     modal.style.display = "block"; // Mostrar el modal
   }

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Generador de Códigos de Barras</title>
+        <link rel="stylesheet" href="style.css" />
+        <script defer src="utils/bootstrap.js"></script>
+        <script defer src="utils/JsBarcode.all.min.js"></script>
+        <script defer src="utils/jspdf.umd.min.js"></script>
+        <script defer src="utils/jszip.min.js"></script>
+        <script defer src="main.js"></script>
+    </head>
+
+    <body class="container">
+        <h1 class="text-center mb-4 fw-bold">Generador de Códigos de Barras</h1>
+        <div class="row">
+            <div class="col-12 col-md-6 order-2 order-md-1">
+                <textarea
+                    class="form-control mb-4"
+                    style="height: 75vh"
+                    id="codesInput"
+                    placeholder="Ingresa los códigos aquí (uno por línea)"
+                ></textarea>
+            </div>
+            <div class="col-12 col-md-6 order-1 order-md-2">
+                <label class="col-form-label" for="barcodeFormat"
+                    >Selecciona el formato del código de barras:</label
+                >
+                <select class="form-select" id="barcodeFormat">
+                    <option value="CODE128">CODE128</option>
+                    <option value="EAN13">EAN13</option>
+                    <option value="PHARMACODE">PHARMACODE</option>
+                    <option value="UPC">UPC</option>
+                    <option value="MSI">MSI</option>
+                    <option value="EAN8">EAN8</option>
+                    <option value="EAN5">EAN5</option>
+                    <option value="EAN2">EAN2</option>
+                    <option value="CODE39">CODE39</option></select
+                ><br />
+
+                <button
+                    class="btn btn-primary mb-4"
+                    id="generar"
+                    onclick="generateBarcodes()"
+                >
+                    Generar Códigos de Barras
+                </button>
+            </div>
+
+            <!-- Modal para la descarga de los códigos de barras -->
+            <div
+                class="modal fade"
+                id="modal-descarga"
+                tabindex="-1"
+                aria-labelledby="modal-descargaLabel"
+                aria-hidden="true"
+            >
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-descargaLabel">
+                                Códigos de Barras Generados
+                            </h5>
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Cerrar"
+                            ></button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="barcode-container"></div>
+                            <button
+                                class="btn btn-secondary"
+                                onclick="downloadAsImages()"
+                            >
+                                Descargar como Imágenes
+                            </button>
+                            <button
+                                class="btn btn-danger"
+                                data-bs-dismiss="modal"
+                                id="modalPdf"
+                            >
+                                Descargar como PDF
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal para la configuración de PDF -->
+            <div
+                class="modal fade"
+                id="pdf"
+                tabindex="-1"
+                aria-labelledby="pdfLabel"
+                aria-hidden="true"
+            >
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="pdfLabel">
+                                Configuración para PDF
+                            </h5>
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Cerrar"
+                            ></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-auto">
+                                    <label class="form-label" for="codesPerRow"
+                                        >Número de códigos por fila:</label
+                                    >
+                                    <input
+                                        class="form-control"
+                                        type="number"
+                                        id="codesPerRow"
+                                        value="4"
+                                        min="1"
+                                        max="10"
+                                    /><br /><br />
+                                </div>
+                                <div class="col-auto">
+                                    <label class="form-label" for="rowsPerPage"
+                                        >Número de filas por página:</label
+                                    >
+                                    <input
+                                        class="form-control"
+                                        type="number"
+                                        id="rowsPerPage"
+                                        value="2"
+                                        min="1"
+                                        max="10"
+                                    /><br /><br />
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <button
+                                        class="btn btn-danger"
+                                        onclick="downloadAsPDF()"
+                                    >
+                                        Descargar como PDF
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const $ = ($) => document.querySelector($);
+            $("#modalPdf").addEventListener("click", () => {
+                const modal = new bootstrap.Modal($("#pdf"));
+                modal.show();
+            });
+        </script>
+    </body>
+</html>
