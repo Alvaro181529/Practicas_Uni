@@ -52,11 +52,11 @@ self.addEventListener("activate", (evt) => {
 self.addEventListener("fetch", (evt) => {
   // Serve static assets from the cache
   if (
-    evt.request.url.includes("/Practicas_Uni/codebar-demo/") ||
-    evt.request.url.includes("/Practicas_Uni/codebar-demo/index.html") ||
-    evt.request.url.includes("/Practicas_Uni/codebar-demo/style.css") ||
-    evt.request.url.includes("/Practicas_Uni/codebar-demo/utils/") ||
-    evt.request.url.includes("/Practicas_Uni/codebar-demo/index.html")
+    evt.request.url.includes("/Practicas_Uni/barcode-demo/") ||
+    evt.request.url.includes("/Practicas_Uni/barcode-demo/index.html") ||
+    evt.request.url.includes("/Practicas_Uni/barcode-demo/style.css") ||
+    evt.request.url.includes("/Practicas_Uni/barcode-demo/utils/") ||
+    evt.request.url.includes("/Practicas_Uni/barcode-demo/index.html")
   ) {
     evt.respondWith(
       caches.match(evt.request).then((cachedResponse) => {
