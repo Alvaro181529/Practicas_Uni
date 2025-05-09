@@ -1,14 +1,14 @@
 const staticCacheName = "site-static-v4";
 const dynamicCacheName = "site-dynamic-v4";
 const assets = [
-  "/barcode-demo/",
-  "/barcode-demo/index.html",
-  "/barcode-demo/fallback.html",
-  "/barcode-demo/utils/bootstrap.js",
-  "/barcode-demo/utils/JsBarcode.all.min.js",
-  "/barcode-demo/utils/jspdf.umd.min.js",
-  "/barcode-demo/utils/jszip.min.js",
-  "/barcode-demo/style.css",
+  "/Practicas_Uni/barcode-demo/",
+  "/Practicas_Uni/barcode-demo/index.html",
+  "/Practicas_Uni/barcode-demo/fallback.html",
+  "/Practicas_Uni/barcode-demo/utils/bootstrap.js",
+  "/Practicas_Uni/barcode-demo/utils/JsBarcode.all.min.js",
+  "/Practicas_Uni/barcode-demo/utils/jspdf.umd.min.js",
+  "/Practicas_Uni/barcode-demo/utils/jszip.min.js",
+  "/Practicas_Uni/barcode-demo/style.css",
 ];
 
 // cache size limit function
@@ -29,7 +29,7 @@ self.addEventListener("install", (evt) => {
     caches.open(staticCacheName).then((cache) => {
       console.log("caching shell assets");
       cache.addAll(assets);
-    }),
+    })
   );
 });
 
@@ -42,9 +42,9 @@ self.addEventListener("activate", (evt) => {
       return Promise.all(
         keys
           .filter((key) => key !== staticCacheName && key !== dynamicCacheName)
-          .map((key) => caches.delete(key)),
+          .map((key) => caches.delete(key))
       );
-    }),
+    })
   );
 });
 
@@ -52,12 +52,16 @@ self.addEventListener("activate", (evt) => {
 self.addEventListener("fetch", (evt) => {
   // Serve static assets from the cache
   if (
+    evt.request.url.includes("/Practicas_Uni/codebar-demo/") ||
+    evt.request.url.includes("/Practicas_Uni/codebar-demo/index.html") ||
+    evt.request.url.includes("/Practicas_Uni/codebar-demo/style.css") ||
+    evt.request.url.includes("/Practicas_Uni/codebar-demo/utils/") ||
     evt.request.url.includes("/Practicas_Uni/codebar-demo/index.html")
   ) {
     evt.respondWith(
       caches.match(evt.request).then((cachedResponse) => {
         return cachedResponse || fetch(evt.request);
-      }),
+      })
     );
   } else {
     // Use dynamic cache for other resources
@@ -73,7 +77,7 @@ self.addEventListener("fetch", (evt) => {
             });
           })
         );
-      }),
+      })
     );
   }
 });
