@@ -1,9 +1,9 @@
 const staticCacheName = "site-static-v4";
 const dynamicCacheName = "site-dynamic-v4";
 const assets = [
-  "/",
-  "/index.html",
-  "/fallback.html",
+  "/barcode-demo/",
+  "index.html",
+  "fallback.html",
   "utils/bootstrap.js",
   "utils/JsBarcode.all.min.js",
   "utils/jspdf.umd.min.js",
