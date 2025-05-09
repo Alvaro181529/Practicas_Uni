@@ -52,8 +52,7 @@ self.addEventListener("activate", (evt) => {
 self.addEventListener("fetch", (evt) => {
   // Serve static assets from the cache
   if (
-    evt.request.url.includes("/assets/") ||
-    evt.request.url.includes("/index.html")
+    evt.request.url.includes("/Practicas_Uni/codebar-demo/index.html")
   ) {
     evt.respondWith(
       caches.match(evt.request).then((cachedResponse) => {
