@@ -2,13 +2,13 @@ const staticCacheName = "site-static-v4";
 const dynamicCacheName = "site-dynamic-v4";
 const assets = [
   "/barcode-demo/",
-  "index.html",
-  "fallback.html",
-  "utils/bootstrap.js",
-  "utils/JsBarcode.all.min.js",
-  "utils/jspdf.umd.min.js",
-  "utils/jszip.min.js",
-  "style.css",
+  "/barcode-demo/index.html",
+  "/barcode-demo/fallback.html",
+  "/barcode-demo/utils/bootstrap.js",
+  "/barcode-demo/utils/JsBarcode.all.min.js",
+  "/barcode-demo/utils/jspdf.umd.min.js",
+  "/barcode-demo/utils/jszip.min.js",
+  "/barcode-demo/style.css",
 ];
 
 // cache size limit function
