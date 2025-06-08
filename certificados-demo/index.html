@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Título optimizado para SEO -->
+        <title>
+            Generador de Certificados en Línea | Crea Certificados
+            Personalizados Rápido y Fácil
+        </title>
+
+        <!-- Meta descripción -->
+        <meta
+            name="description"
+            content="Crea certificados personalizados en línea de manera rápida y sencilla. Diseña y descarga certificados para cualquier ocasión, evento o logro. ¡Empieza ahora y crea el tuyo gratis!"
+        />
+
+        <!-- Palabras clave -->
+        <meta
+            name="keywords"
+            content="generador de certificados, crear certificados online, certificados personalizados, generar certificados gratis, certificados para eventos, diseño de certificados, crear certificados de logros"
+        />
+
+        <!-- Meta autor -->
+        <meta name="author" content="Alvaro Herbert Medrano Perez" />
+
+        <!-- Meta Open Graph (para redes sociales) -->
+        <meta
+            property="og:title"
+            content="Generador de Certificados en Línea | Crea Certificados Personalizados Rápido y Fácil"
+        />
+        <meta
+            property="og:description"
+            content="Crea certificados personalizados en línea para cualquier evento, curso o logro. Diseña, personaliza y descarga certificados gratis con nuestra herramienta fácil de usar."
+        />
+        <meta property="og:image" content="/img/certificado-icono.png" />
+        <meta
+            property="og:url"
+            content="https://alvaro181529.github.io/portafolio"
+        />
+        <meta property="og:type" content="website" />
+
+        <!-- Meta Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="Generador de Certificados en Línea"
+        />
+        <meta
+            name="twitter:description"
+            content="Genera y personaliza certificados online para eventos, cursos o cualquier logro. ¡Empieza ahora y crea tu certificado gratis!"
+        />
+        <meta name="twitter:image" content="/img/certificado-icono.png" />
+
+        <!-- Enlace a Bootstrap CSS (para diseño) -->
+        <link rel="stylesheet" href="bootstrap.css" />
+
+        <!-- Otros enlaces -->
+        <link rel="stylesheet" href="style.css" />
+        <link rel="manifest" href="manifest.json" />
+        <link rel="apple-touch-icon" href="/img/certificado-icono.png" />
+        <meta name="apple-mobile-web-app-status-bar" content="#F1F1F1" />
+        <meta name="theme-color" content="#C4C4C4" />
+
+        <link rel="stylesheet" href="bootstrap.css" />
+        <style>
+            body {
+                padding: 0;
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    sans-serif;
+                background-color: #fafafa;
+            }
+            .container-main {
+                max-width: 900px;
+            }
+            .card-minimal {
+                border: 1px solid #e9ecef;
+                border-radius: 8px;
+                background: white;
+            }
+            .preview-area {
+                min-height: 300px;
+                border: 2px dashed #dee2e6;
+                border-radius: 8px;
+                background: #f8f9fa;
+            }
+            .btn-minimal {
+                border-radius: 6px;
+                font-weight: 500;
+                padding: 12px 24px;
+            }
+            .form-control,
+            .form-select {
+                border-radius: 6px;
+                border: 1px solid #dee2e6;
+            }
+            .form-control:focus,
+            .form-select:focus {
+                border-color: #495057;
+                box-shadow: 0 0 0 0.2rem rgba(73, 80, 87, 0.1);
+            }
+            .text-muted-light {
+                color: #8e9297 !important;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header class="bg-white border-bottom py-4 mb-5">
+            <div class="container">
+                <h1 class="h2 mb-1 text-dark">Generador de Certificados</h1>
+                <p class="text-muted mb-0">Crea certificados personalizados</p>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="row g-4">
+                <!-- Formulario -->
+                <div class="col-lg-5">
+                    <div class="card-minimal p-4">
+                        <!-- Upload de imagen -->
+                        <div class="mb-4">
+                            <label
+                                for="imageUpload"
+                                class="form-label text-dark fw-bold mb-2"
+                            >
+                                Imagen del certificado
+                            </label>
+                            <input
+                                type="file"
+                                class="form-control"
+                                id="imageUpload"
+                                accept="image/*"
+                            />
+                        </div>
+
+                        <!-- Nombres -->
+                        <div class="mb-4">
+                            <label
+                                for="namesInput"
+                                class="form-label text-dark fw-bold mb-2"
+                            >
+                                Lista de nombres
+                            </label>
+                            <textarea
+                                class="form-control"
+                                id="namesInput"
+                                rows="4"
+                                placeholder="Ana Pérez&#10;Juan Gómez&#10;María López"
+                            ></textarea>
+                            <small class="text-muted-light"
+                                >Un nombre por línea</small
+                            >
+                        </div>
+
+                        <!-- Configuración -->
+                        <div class="row g-3 mb-4">
+                            <div class="col-6">
+                                <label
+                                    for="fontSize"
+                                    class="form-label text-dark fw-bold mb-2"
+                                >
+                                    Tamaño
+                                </label>
+                                <input
+                                    type="number"
+                                    class="form-control"
+                                    id="fontSize"
+                                    value="24"
+                                    min="10"
+                                    max="100"
+                                />
+                            </div>
+                            <div class="col-6">
+                                <label
+                                    for="fontFamily"
+                                    class="form-label text-dark fw-bold mb-2"
+                                >
+                                    Fuente
+                                </label>
+                                <select class="form-select" id="fontFamily">
+                                    <option value="Arial">Arial</option>
+                                    <option value="Times New Roman">
+                                        Times New Roman
+                                    </option>
+                                    <option value="Georgia">Georgia</option>
+                                    <option value="Courier New">
+                                        Courier New
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Botones -->
+                        <div class="d-grid gap-2">
+                            <!-- <button class="btn btn-dark btn-minimal" onclick="generatePreview()">
+                            Generar previsualización
+                        </button> -->
+                            <div class="row g-2">
+                                <div class="col-6">
+                                    <button
+                                        class="btn btn-outline-dark btn-minimal w-100"
+                                        onclick="downloadAllCertificates()"
+                                    >
+                                        Descargar todos
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <button
+                                        class="btn btn-outline-dark btn-minimal w-100"
+                                        onclick="downloadAllCertificatesAsZip()"
+                                    >
+                                        Descargar ZIP
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Previsualización -->
+                <div class="col-lg-7">
+                    <div class="card-minimal p-4">
+                        <h6 class="text-dark fw-bold mb-3">Previsualización</h6>
+                        <div id="previewContainer">
+                            <div
+                                class="preview-area d-flex align-items-center justify-content-center"
+                            >
+                                <div class="text-center">
+                                    <div
+                                        class="text-muted-light mb-2"
+                                        style="font-size: 2rem"
+                                    >
+                                        📄
+                                    </div>
+                                    <p class="text-muted-light mb-1">
+                                        Sube una imagen para comenzar
+                                    </p>
+                                    <small class="text-muted-light"
+                                        >La previsualización aparecerá
+                                        aquí</small
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Instrucciones -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card border-0 bg-light">
+                        <div class="card-body p-4">
+                            <h5 class="card-title text-dark">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-info-circle-fill"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"
+                                    />
+                                </svg>
+                                Instrucciones de Uso
+                            </h5>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <span
+                                            class="badge bg-dark rounded-pill me-3 mt-1"
+                                            >1</span
+                                        >
+                                        <div>
+                                            <strong>Sube tu plantilla</strong>
+                                            <p class="mb-0 small text-muted">
+                                                Selecciona la imagen base de tu
+                                                certificado
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <span
+                                            class="badge bg-dark rounded-pill me-3 mt-1"
+                                            >2</span
+                                        >
+                                        <div>
+                                            <strong>Agrega los nombres</strong>
+                                            <p class="mb-0 small text-muted">
+                                                Escribe cada nombre en una línea
+                                                separada
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <span
+                                            class="badge bg-dark rounded-pill me-3 mt-1"
+                                            >3</span
+                                        >
+                                        <div>
+                                            <strong
+                                                >Personaliza y descarga</strong
+                                            >
+                                            <p class="mb-0 small text-muted">
+                                                Ajusta la fuente y descarga tus
+                                                certificados
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/konva@8.0.3/konva.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.8.0/jszip.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

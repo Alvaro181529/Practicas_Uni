@@ -1,7 +1,7 @@
 {
-  "name": "Code bar",
-  "short_name": "CodeBar",
-  "start_url": "/Practicas_Uni/barcode-demo/index.html",
+  "name": "Certify",
+  "short_name": "Certify",
+  "start_url": "/Practicas_Uni/certificados-demo/index.html",
   "display": "standalone",
   "background_color": "#F1F1F1",
   "theme_color": "#C4C4C4",
